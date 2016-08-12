@@ -1,6 +1,6 @@
 Change Log
 ==========
 
-Version 1.0.0 *TBD*
+Version 0.1 *2016-08-12*
 ----------------------------
-Initial release.
+Initial, internal release.
