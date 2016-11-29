@@ -15,6 +15,8 @@ import io.reactivex.functions.Consumer;
 public class TicTacToeCoordinator extends Coordinator {
   private final TicTacToeBoard board;
 
+  private Disposable subscription;
+
   public TicTacToeCoordinator(TicTacToeBoard board) {
     this.board = board;
   }
@@ -23,12 +25,21 @@ public class TicTacToeCoordinator extends Coordinator {
     super.attach(view);
 
     final ViewGroup viewGroup = (ViewGroup) view;
-    view.setTag(R.id.tic_tac_toe_sub_tag, board.grid().subscribe(new Consumer<Value[][]>() {
+    subscription = board.grid().subscribe(new Consumer<Value[][]>() {
       @Override public void accept(Value[][] values) throws Exception {
         refresh(viewGroup, values);
       }
-    }));
+    });
+    setCellClickListeners(viewGroup);
+  }
 
+  @Override public void detach(View view) {
+    subscription.dispose();
+    subscription = null;
+    super.detach(view);
+  }
+
+  private void setCellClickListeners(ViewGroup viewGroup) {
     for (int i = 0; i < 9; i++) {
       final int index = i;
       final View cell = viewGroup.getChildAt(i);
@@ -39,13 +50,6 @@ public class TicTacToeCoordinator extends Coordinator {
         }
       });
     }
-  }
-
-  @Override public void detach(View view) {
-    ((Disposable) view.getTag(R.id.tic_tac_toe_sub_tag)).dispose();
-    view.setTag(R.id.tic_tac_toe_sub_tag, null);
-
-    super.detach(view);
   }
 
   private void refresh(ViewGroup viewGroup, Value[][] values) {

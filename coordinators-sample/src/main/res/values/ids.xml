@@ -15,6 +15,5 @@
   -->
 
 <resources>
-  <item type="id" name="tic_tac_toe_sub_tag"/>
   <item type="id" name="tic_tac_toe_cell_value_tag"/>
 </resources>

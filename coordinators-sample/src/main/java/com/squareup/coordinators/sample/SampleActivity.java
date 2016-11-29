@@ -34,6 +34,11 @@ public class SampleActivity extends Activity {
 
     Coordinators.bind(findViewById(R.id.board_view), new CoordinatorProvider() {
       @Nullable @Override public Coordinator provideCoordinator(View view) {
+
+        // A more interesting app could inspect the given view and choose an
+        // appropriate coordinator for it -- perhaps based on the type of the view,
+        // on on meta information in a tag on the view, so many possibilities...
+
         return new TicTacToeCoordinator(model);
       }
     });

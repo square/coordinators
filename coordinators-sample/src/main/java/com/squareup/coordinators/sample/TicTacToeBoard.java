@@ -9,7 +9,7 @@ import java.util.Arrays;
 import static com.squareup.coordinators.sample.TicTacToeBoard.Value.EMPTY;
 import static java.lang.String.format;
 
-class TicTacToeBoard {
+final class TicTacToeBoard {
   enum Value {
     EMPTY(""), X, O;
 
@@ -25,13 +25,15 @@ class TicTacToeBoard {
   }
 
   private BehaviorRelay<Value[][]> grid = BehaviorRelay.createDefault(new Value[][] {
-      { EMPTY, EMPTY, EMPTY }, { EMPTY, EMPTY, EMPTY }, { EMPTY, EMPTY, EMPTY }
+      { EMPTY, EMPTY, EMPTY },
+      { EMPTY, EMPTY, EMPTY },
+      { EMPTY, EMPTY, EMPTY }
   });
 
   /**
    * Returns an observable of the tic tac toe board. First value is provided immediately,
    * succeeding values are guaranteed to be distinct from previous values. Values are
-   * always provided from the main thread.
+   * always provided on the main thread.
    */
   public Observable<Value[][]> grid() {
     return grid.distinctUntilChanged(new BiPredicate<Value[][], Value[][]>() {
@@ -41,6 +43,9 @@ class TicTacToeBoard {
     });
   }
 
+  /**
+   * Change the value of a cell. Must be called from the main thread.
+   */
   public void set(int row, int col, Value value) {
     assertOnMain();
     assertIndex("row", row);
