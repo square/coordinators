@@ -23,6 +23,6 @@ public class SampleActivity extends Activity {
 
   @Override protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
-    setContentView(R.layout.basic_activity_frame);
+    setContentView(R.layout.tic_tac_toe_view);
   }
 }
