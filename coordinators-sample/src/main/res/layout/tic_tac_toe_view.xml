@@ -30,9 +30,12 @@
       android:layout_columnWeight="1"
       android:layout_gravity="fill"
       android:layout_rowWeight="1"
-      android:background="@color/light"
+      android:background="@color/light_cell"
+      android:fontFamily="casual"
       android:gravity="center"
-      android:textSize="24sp"
+      android:textColor="@color/symbol"
+      android:textSize="36sp"
+      android:textStyle="bold"
       tools:text="X"
       />
 
@@ -42,9 +45,12 @@
       android:layout_columnWeight="1"
       android:layout_gravity="fill"
       android:layout_rowWeight="1"
-      android:background="@color/dark"
+      android:background="@color/dark_cell"
+      android:fontFamily="casual"
       android:gravity="center"
-      android:textSize="24sp"
+      android:textColor="@color/symbol"
+      android:textSize="36sp"
+      android:textStyle="bold"
       tools:text="O"
       />
 
@@ -54,9 +60,12 @@
       android:layout_columnWeight="1"
       android:layout_gravity="fill"
       android:layout_rowWeight="1"
-      android:background="@color/light"
+      android:background="@color/light_cell"
+      android:fontFamily="casual"
       android:gravity="center"
-      android:textSize="24sp"
+      android:textColor="@color/symbol"
+      android:textSize="36sp"
+      android:textStyle="bold"
       tools:text="X"
       />
 
@@ -67,9 +76,12 @@
       android:layout_columnWeight="1"
       android:layout_gravity="fill"
       android:layout_rowWeight="1"
-      android:background="@color/dark"
+      android:background="@color/dark_cell"
+      android:fontFamily="casual"
       android:gravity="center"
-      android:textSize="24sp"
+      android:textColor="@color/symbol"
+      android:textSize="36sp"
+      android:textStyle="bold"
       tools:text="O"
       />
 
@@ -79,9 +91,12 @@
       android:layout_columnWeight="1"
       android:layout_gravity="fill"
       android:layout_rowWeight="1"
-      android:background="@color/light"
+      android:background="@color/light_cell"
+      android:fontFamily="casual"
       android:gravity="center"
-      android:textSize="24sp"
+      android:textColor="@color/symbol"
+      android:textSize="36sp"
+      android:textStyle="bold"
       tools:text="X"
       />
 
@@ -91,9 +106,12 @@
       android:layout_columnWeight="1"
       android:layout_gravity="fill"
       android:layout_rowWeight="1"
-      android:background="@color/dark"
+      android:background="@color/dark_cell"
+      android:fontFamily="casual"
       android:gravity="center"
-      android:textSize="24sp"
+      android:textColor="@color/symbol"
+      android:textSize="36sp"
+      android:textStyle="bold"
       tools:text="O"
       />
 
@@ -104,9 +122,12 @@
       android:layout_columnWeight="1"
       android:layout_gravity="fill"
       android:layout_rowWeight="1"
-      android:background="@color/light"
+      android:background="@color/light_cell"
+      android:fontFamily="casual"
       android:gravity="center"
-      android:textSize="24sp"
+      android:textColor="@color/symbol"
+      android:textSize="36sp"
+      android:textStyle="bold"
       tools:text="X"
       />
 
@@ -116,9 +137,12 @@
       android:layout_columnWeight="1"
       android:layout_gravity="fill"
       android:layout_rowWeight="1"
-      android:background="@color/dark"
+      android:background="@color/dark_cell"
+      android:fontFamily="casual"
       android:gravity="center"
-      android:textSize="24sp"
+      android:textColor="@color/symbol"
+      android:textSize="36sp"
+      android:textStyle="bold"
       tools:text="O"
       />
 
@@ -128,9 +152,12 @@
       android:layout_columnWeight="1"
       android:layout_gravity="fill"
       android:layout_rowWeight="1"
-      android:background="@color/light"
+      android:background="@color/light_cell"
+      android:fontFamily="casual"
       android:gravity="center"
-      android:textSize="24sp"
+      android:textColor="@color/symbol"
+      android:textSize="36sp"
+      android:textStyle="bold"
       tools:text="X"
       />
 </GridLayout>

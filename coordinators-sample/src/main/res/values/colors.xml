@@ -19,7 +19,7 @@
   <color name="colorPrimary">#3F51B5</color>
   <color name="colorPrimaryDark">#303F9F</color>
   <color name="colorAccent">#FF4081</color>
-  <color name="dark">#CCCCCC</color>
-  <color name="light">#EEEEEE</color>
-  <color name="symbol">#551A8B</color>
+  <color name="dark_cell">#CCCCCC</color>
+  <color name="light_cell">#EEEEEE</color>
+  <color name="symbol">#6a1b9a</color>
 </resources>
