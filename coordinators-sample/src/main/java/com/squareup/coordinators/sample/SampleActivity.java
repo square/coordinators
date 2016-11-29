@@ -18,11 +18,24 @@ package com.squareup.coordinators.sample;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.support.annotation.Nullable;
+import android.view.View;
+import com.squareup.coordinators.Coordinator;
+import com.squareup.coordinators.CoordinatorProvider;
+import com.squareup.coordinators.Coordinators;
 
 public class SampleActivity extends Activity {
+
+  private static final TicTacToeBoard model = new TicTacToeBoard();
 
   @Override protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.tic_tac_toe_view);
+
+    Coordinators.bind(findViewById(R.id.board_view), new CoordinatorProvider() {
+      @Nullable @Override public Coordinator provideCoordinator(View view) {
+        return new TicTacToeCoordinator(model);
+      }
+    });
   }
 }

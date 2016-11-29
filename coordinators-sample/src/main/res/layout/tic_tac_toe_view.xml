@@ -22,6 +22,7 @@
     android:layout_height="match_parent"
     android:columnCount="3"
     tools:context=".SampleActivity"
+    android:id="@+id/board_view"
     >
 
   <TextView
