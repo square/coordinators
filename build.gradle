@@ -1,3 +1,7 @@
+ext.minSdkVersion = 15
+ext.compileSdkVersion = 23
+ext.buildToolsVersion = '23.0.3'
+
 buildscript {
   repositories {
     mavenCentral()
