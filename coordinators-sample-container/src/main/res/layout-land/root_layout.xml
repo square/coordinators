@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:baselineAligned="false"
+    >
+
+  <LinearLayout
+      android:id="@+id/buttons"
+      android:layout_width="0dp"
+      android:layout_height="match_parent"
+      android:layout_weight="1"
+      android:gravity="center"
+      android:orientation="vertical"
+      >
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Tic Tac Toe"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:textSize="24sp"
+        tools:ignore="HardcodedText"
+        >
+      <tag
+          android:id="@id/layout_to_show_tag"
+          android:value="@layout/tic_tac_toe_view"
+          />
+    </Button>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Counter"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:textSize="24sp"
+        tools:ignore="HardcodedText"
+        >
+      <tag
+          android:id="@id/layout_to_show_tag"
+          android:value="@layout/counter_view"
+          />
+    </Button>
+
+  </LinearLayout>
+
+  <FrameLayout
+      android:id="@+id/container"
+      android:layout_width="0dp"
+      android:layout_height="match_parent"
+      android:layout_weight="3"
+      />
+
+</LinearLayout>

@@ -21,7 +21,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:columnCount="3"
-    tools:context=".SampleActivity"
+    tools:context=".BasicSampleActivity"
     android:id="@+id/board_view"
     >
 

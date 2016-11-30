@@ -1,10 +1,10 @@
-package com.squareup.coordinators.sample;
+package com.squareup.coordinators.sample.basic;
 
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 import com.squareup.coordinators.Coordinator;
-import com.squareup.coordinators.sample.TicTacToeBoard.Value;
+import com.squareup.coordinators.sample.basic.TicTacToeBoard.Value;
 import io.reactivex.disposables.Disposable;
 import io.reactivex.functions.Consumer;
 
@@ -35,7 +35,6 @@ public class TicTacToeCoordinator extends Coordinator {
 
   @Override public void detach(View view) {
     subscription.dispose();
-    subscription = null;
     super.detach(view);
   }
 

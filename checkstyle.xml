@@ -78,7 +78,11 @@
     <module name="GenericWhitespace"/>
     <module name="EmptyForIteratorPad"/>
     <module name="MethodParamPad"/>
-    <module name="NoWhitespaceAfter"/>
+    <module name="NoWhitespaceAfter">
+      <!-- Drop ARRAY_INIT. -->
+      <property name="tokens"
+          value="INC, DEC, UNARY_MINUS, UNARY_PLUS, BNOT, LNOT, DOT, ARRAY_DECLARATOR, INDEX_OP"/>
+    </module>
     <module name="NoWhitespaceBefore"/>
     <module name="OperatorWrap"/>
     <module name="ParenPad"/>
@@ -99,7 +103,7 @@
     <module name="EmptyBlock"/>
     <module name="LeftCurly"/>
     <module name="NeedBraces">
-        <property name="tokens" value="LITERAL_DO, LITERAL_ELSE, LITERAL_FOR, LITERAL_WHILE"/>
+      <property name="tokens" value="LITERAL_DO, LITERAL_ELSE, LITERAL_FOR, LITERAL_WHILE"/>
     </module>
     <module name="RightCurly"/>
 

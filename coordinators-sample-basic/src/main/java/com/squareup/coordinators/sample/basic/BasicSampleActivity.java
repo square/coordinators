@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.squareup.coordinators.sample;
+package com.squareup.coordinators.sample.basic;
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -24,9 +24,9 @@ import com.squareup.coordinators.Coordinator;
 import com.squareup.coordinators.CoordinatorProvider;
 import com.squareup.coordinators.Coordinators;
 
-public class SampleActivity extends Activity {
+public class BasicSampleActivity extends Activity {
 
-  private static final TicTacToeBoard model = new TicTacToeBoard();
+  private static final TicTacToeBoard MODEL = new TicTacToeBoard();
 
   @Override protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
@@ -39,7 +39,7 @@ public class SampleActivity extends Activity {
         // appropriate coordinator for it -- perhaps based on the type of the view,
         // on on meta information in a tag on the view, so many possibilities...
 
-        return new TicTacToeCoordinator(model);
+        return new TicTacToeCoordinator(MODEL);
       }
     });
   }
