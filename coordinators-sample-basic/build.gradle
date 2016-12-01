@@ -1,0 +1,42 @@
+apply plugin: 'com.android.application'
+
+android {
+  compileSdkVersion rootProject.ext.compileSdkVersion
+  buildToolsVersion rootProject.ext.buildToolsVersion
+
+  defaultConfig {
+    applicationId "com.squareup.coordinators.sample.basic"
+
+    minSdkVersion rootProject.ext.compileSdkVersion
+    versionName VERSION_NAME
+    testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+  }
+
+  buildTypes {
+    release {
+      minifyEnabled false
+    }
+  }
+
+  packagingOptions {
+    exclude 'LICENSE.txt'
+  }
+}
+
+dependencies {
+  compile project(':coordinators')
+  compile 'com.android.support:appcompat-v7:23.1.1'
+  compile 'com.android.support:design:23.1.1'
+  androidTestCompile 'com.android.support.test:runner:0.4'
+  androidTestCompile 'com.android.support.test:rules:0.4'
+  androidTestCompile 'com.android.support.test.espresso:espresso-core:2.2.1'
+  compile 'com.jakewharton.rxrelay2:rxrelay:2.0.0'
+  compile 'io.reactivex.rxjava2:rxjava:2.0.1'
+}
+
+//noinspection GroovyAssignabilityCheck
+configurations.all {
+  resolutionStrategy {
+    force 'com.android.support:support-annotations:23.1.1'
+  }
+}

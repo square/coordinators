@@ -1,4 +1,4 @@
-package com.squareup.coordinators.sample;
+package com.squareup.coordinators.sample.basic;
 
 import android.os.Looper;
 import com.jakewharton.rxrelay2.BehaviorRelay;
@@ -6,7 +6,7 @@ import io.reactivex.Observable;
 import io.reactivex.functions.BiPredicate;
 import java.util.Arrays;
 
-import static com.squareup.coordinators.sample.TicTacToeBoard.Value.EMPTY;
+import static com.squareup.coordinators.sample.basic.TicTacToeBoard.Value.EMPTY;
 import static java.lang.String.format;
 
 final class TicTacToeBoard {
@@ -25,8 +25,8 @@ final class TicTacToeBoard {
   }
 
   private BehaviorRelay<Value[][]> grid = BehaviorRelay.createDefault(new Value[][] {
-      { EMPTY, EMPTY, EMPTY },
-      { EMPTY, EMPTY, EMPTY },
+      { EMPTY, EMPTY, EMPTY }, //
+      { EMPTY, EMPTY, EMPTY }, //
       { EMPTY, EMPTY, EMPTY }
   });
 

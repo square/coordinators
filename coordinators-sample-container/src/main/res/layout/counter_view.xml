@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    >
+
+  <tag
+      android:id="@id/coordinator_class_tag"
+      android:value="com.squareup.coordinators.sample.container.counter.CounterCoordinator"
+      />
+
+  <Button
+      android:id="@+id/count_down"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_gravity="center"
+      android:text="&lt;"
+      android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+      android:textSize="24sp"
+      tools:ignore="HardcodedText"
+      />
+
+  <TextView
+      android:id="@+id/counter_value"
+      android:layout_width="0dp"
+      android:layout_height="match_parent"
+      android:layout_weight="1"
+      android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+      android:textSize="48sp"
+      tools:text="1234"
+      android:gravity="center"
+      />
+
+  <Button
+      android:id="@+id/count_up"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_gravity="center"
+      android:text=">"
+      android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+      android:textSize="24sp"
+      tools:ignore="HardcodedText"
+      />
+
+</LinearLayout>
