@@ -38,8 +38,8 @@ public final class Coordinators {
     View.OnAttachStateChangeListener binding = new Binding(coordinator, view);
     view.addOnAttachStateChangeListener(binding);
     // Sometimes we missed the first attach because the child's already been added.
-    // Sometimes we didn't, which is why the binding keeps track and avoids double
-    // attachment.
+    // Sometimes we didn't. The binding keeps track to avoid double attachment of the Coordinator,
+    // and to guard against attachment to two different views simultaneously.
     binding.onViewAttachedToWindow(view);
   }
 

@@ -15,6 +15,7 @@
  */
 package com.squareup.coordinators;
 
+import android.support.annotation.NonNull;
 import android.view.View;
 
 final class Binding implements View.OnAttachStateChangeListener {
@@ -27,8 +28,8 @@ final class Binding implements View.OnAttachStateChangeListener {
     this.view = view;
   }
 
-  @Override public void onViewAttachedToWindow(View v) {
-    if (!v.equals(attached)) {
+  @Override public void onViewAttachedToWindow(@NonNull View v) {
+    if (v != attached) {
       attached = v;
       if (coordinator.isAttached()) {
         throw new IllegalStateException(
@@ -40,7 +41,7 @@ final class Binding implements View.OnAttachStateChangeListener {
     }
   }
 
-  @Override public void onViewDetachedFromWindow(View v) {
+  @Override public void onViewDetachedFromWindow(@NonNull View v) {
     if (v == attached) {
       attached = null;
       coordinator.detach(view);

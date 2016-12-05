@@ -28,7 +28,7 @@ public class Coordinator {
 
   private boolean attached;
 
-  void setAttached(boolean attached) {
+  final void setAttached(boolean attached) {
     this.attached = attached;
   }
 
