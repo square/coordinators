@@ -7,7 +7,7 @@ android {
   defaultConfig {
     applicationId "com.squareup.coordinators.sample.basic"
 
-    minSdkVersion rootProject.ext.compileSdkVersion
+    minSdkVersion rootProject.ext.minSdkVersion
     versionName VERSION_NAME
     testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
   }
