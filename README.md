@@ -29,6 +29,15 @@ Coordinators.bind(view, coordinatorProvider);
 Coordinators.installBinder(viewGroup, coordinatorProvider);
 ```
 
+Download
+--------
+
+```groovy
+dependencies {
+  compile 'com.squareup.coordinators:coordinators:0.2'
+}
+```
+
 License
 -------
 
