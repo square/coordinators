@@ -48,6 +48,10 @@ public final class Coordinators {
    * to the group.
    */
   public static void installBinder(ViewGroup viewGroup, final CoordinatorProvider provider) {
+    int childCount = viewGroup.getChildCount();
+    for (int i = 0; i < childCount; i++) {
+      bind(viewGroup.getChildAt(i), provider);
+    }
     viewGroup.setOnHierarchyChangeListener(new Binder(provider));
   }
 
