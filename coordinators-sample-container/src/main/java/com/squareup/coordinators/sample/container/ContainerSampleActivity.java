@@ -67,7 +67,7 @@ public class ContainerSampleActivity extends Activity {
     Coordinators.installBinder(container, new CoordinatorProvider() {
       @Nullable @Override public Coordinator provideCoordinator(View view) {
         String coordinatorName = (String) view.getTag(R.id.coordinator_class_tag);
-        return OBJECT_GRAPH.get(coordinatorName);
+        return OBJECT_GRAPH.create(coordinatorName);
       }
     });
 
