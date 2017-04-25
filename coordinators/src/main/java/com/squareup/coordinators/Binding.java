@@ -21,7 +21,6 @@ import android.view.View;
 final class Binding implements View.OnAttachStateChangeListener {
   private final Coordinator coordinator;
   private final View view;
-  private View attached;
 
   Binding(Coordinator coordinator, View view) {
     this.coordinator = coordinator;
@@ -29,24 +28,26 @@ final class Binding implements View.OnAttachStateChangeListener {
   }
 
   @Override public void onViewAttachedToWindow(@NonNull View v) {
-    if (v != attached) {
-      attached = v;
-      if (coordinator.isAttached()) {
-        throw new IllegalStateException(
-            "Coordinator " + coordinator + " is already attached to a View");
-      }
-      coordinator.setAttached(true);
-      coordinator.attach(view);
-      view.setTag(R.id.coordinator, coordinator);
+    if (v != view) {
+      throw new AssertionError("Binding for view " + view
+          + " notified of attachment of different view " + v);
     }
+    if (coordinator.isAttached()) {
+      throw new IllegalStateException(
+          "Coordinator " + coordinator + " is already attached");
+    }
+    coordinator.setAttached(true);
+    coordinator.attach(view);
+    view.setTag(R.id.coordinator, coordinator);
   }
 
   @Override public void onViewDetachedFromWindow(@NonNull View v) {
-    if (v == attached) {
-      attached = null;
-      coordinator.detach(view);
-      coordinator.setAttached(false);
-      view.setTag(R.id.coordinator, null);
+    if (v != view) {
+      throw new AssertionError("Binding for view " + view
+          + " notified of detachment of different view " + v);
     }
+    coordinator.detach(view);
+    coordinator.setAttached(false);
+    view.setTag(R.id.coordinator, null);
   }
 }
