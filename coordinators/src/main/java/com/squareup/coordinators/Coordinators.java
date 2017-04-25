@@ -15,11 +15,10 @@
  */
 package com.squareup.coordinators;
 
+import android.os.Build;
 import android.support.annotation.Nullable;
 import android.view.View;
 import android.view.ViewGroup;
-
-import static android.support.v4.view.ViewCompat.isAttachedToWindow;
 
 public final class Coordinators {
   private Coordinators() {
@@ -61,5 +60,13 @@ public final class Coordinators {
 
   @Nullable public static Coordinator getCoordinator(View view) {
     return (Coordinator) view.getTag(R.id.coordinator);
+  }
+
+  private static boolean isAttachedToWindow(View view) {
+    if (Build.VERSION.SDK_INT < Build.VERSION_CODES.KITKAT) {
+      return view.getWindowToken() != null;
+    } else {
+      return view.isAttachedToWindow();
+    }
   }
 }
