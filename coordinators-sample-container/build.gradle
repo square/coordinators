@@ -7,7 +7,7 @@ android {
   defaultConfig {
     applicationId "com.squareup.coordinators.sample.root_layout"
 
-    minSdkVersion rootProject.ext.minSdkVersion
+    minSdkVersion 21 // needed for <tag> in the layout files in this sample.
     versionName VERSION_NAME
     testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
   }
