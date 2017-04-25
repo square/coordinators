@@ -19,6 +19,8 @@ import android.support.annotation.Nullable;
 import android.view.View;
 import android.view.ViewGroup;
 
+import static android.support.v4.view.ViewCompat.isAttachedToWindow;
+
 public final class Coordinators {
   private Coordinators() {
   }
@@ -40,7 +42,9 @@ public final class Coordinators {
     // Sometimes we missed the first attach because the child's already been added.
     // Sometimes we didn't. The binding keeps track to avoid double attachment of the Coordinator,
     // and to guard against attachment to two different views simultaneously.
-    binding.onViewAttachedToWindow(view);
+    if (isAttachedToWindow(view)) {
+      binding.onViewAttachedToWindow(view);
+    }
   }
 
   /**
