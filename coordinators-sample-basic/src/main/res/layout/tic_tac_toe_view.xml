@@ -15,22 +15,23 @@
   ~ limitations under the License.
   -->
 
-<GridLayout
+<android.support.v7.widget.GridLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:columnCount="3"
+    app:columnCount="3"
     tools:context=".BasicSampleActivity"
     android:id="@+id/board_view"
-    >
+>
 
   <TextView
       android:layout_width="0dp"
       android:layout_height="0dp"
-      android:layout_columnWeight="1"
-      android:layout_gravity="fill"
-      android:layout_rowWeight="1"
+      app:layout_columnWeight="1"
+      app:layout_gravity="fill"
+      app:layout_rowWeight="1"
       android:background="@color/light_cell"
       android:fontFamily="casual"
       android:gravity="center"
@@ -43,9 +44,9 @@
   <TextView
       android:layout_width="0dp"
       android:layout_height="0dp"
-      android:layout_columnWeight="1"
-      android:layout_gravity="fill"
-      android:layout_rowWeight="1"
+      app:layout_columnWeight="1"
+      app:layout_gravity="fill"
+      app:layout_rowWeight="1"
       android:background="@color/dark_cell"
       android:fontFamily="casual"
       android:gravity="center"
@@ -58,9 +59,9 @@
   <TextView
       android:layout_width="0dp"
       android:layout_height="0dp"
-      android:layout_columnWeight="1"
-      android:layout_gravity="fill"
-      android:layout_rowWeight="1"
+      app:layout_columnWeight="1"
+      app:layout_gravity="fill"
+      app:layout_rowWeight="1"
       android:background="@color/light_cell"
       android:fontFamily="casual"
       android:gravity="center"
@@ -74,9 +75,9 @@
   <TextView
       android:layout_width="0dp"
       android:layout_height="0dp"
-      android:layout_columnWeight="1"
-      android:layout_gravity="fill"
-      android:layout_rowWeight="1"
+      app:layout_columnWeight="1"
+      app:layout_gravity="fill"
+      app:layout_rowWeight="1"
       android:background="@color/dark_cell"
       android:fontFamily="casual"
       android:gravity="center"
@@ -89,9 +90,9 @@
   <TextView
       android:layout_width="0dp"
       android:layout_height="0dp"
-      android:layout_columnWeight="1"
-      android:layout_gravity="fill"
-      android:layout_rowWeight="1"
+      app:layout_columnWeight="1"
+      app:layout_gravity="fill"
+      app:layout_rowWeight="1"
       android:background="@color/light_cell"
       android:fontFamily="casual"
       android:gravity="center"
@@ -104,9 +105,9 @@
   <TextView
       android:layout_width="0dp"
       android:layout_height="0dp"
-      android:layout_columnWeight="1"
-      android:layout_gravity="fill"
-      android:layout_rowWeight="1"
+      app:layout_columnWeight="1"
+      app:layout_gravity="fill"
+      app:layout_rowWeight="1"
       android:background="@color/dark_cell"
       android:fontFamily="casual"
       android:gravity="center"
@@ -119,9 +120,9 @@
   <TextView
       android:layout_width="0dp"
       android:layout_height="0dp"
-      android:layout_columnWeight="1"
-      android:layout_gravity="fill"
-      android:layout_rowWeight="1"
+      app:layout_columnWeight="1"
+      app:layout_gravity="fill"
+      app:layout_rowWeight="1"
       android:background="@color/light_cell"
       android:fontFamily="casual"
       android:gravity="center"
@@ -134,9 +135,9 @@
   <TextView
       android:layout_width="0dp"
       android:layout_height="0dp"
-      android:layout_columnWeight="1"
-      android:layout_gravity="fill"
-      android:layout_rowWeight="1"
+      app:layout_columnWeight="1"
+      app:layout_gravity="fill"
+      app:layout_rowWeight="1"
       android:background="@color/dark_cell"
       android:fontFamily="casual"
       android:gravity="center"
@@ -149,9 +150,9 @@
   <TextView
       android:layout_width="0dp"
       android:layout_height="0dp"
-      android:layout_columnWeight="1"
-      android:layout_gravity="fill"
-      android:layout_rowWeight="1"
+      app:layout_columnWeight="1"
+      app:layout_gravity="fill"
+      app:layout_rowWeight="1"
       android:background="@color/light_cell"
       android:fontFamily="casual"
       android:gravity="center"
@@ -160,4 +161,4 @@
       android:textStyle="bold"
       tools:text="X"
       />
-</GridLayout>
+</android.support.v7.widget.GridLayout>

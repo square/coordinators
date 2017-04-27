@@ -27,6 +27,7 @@ dependencies {
   compile project(':coordinators')
   compile 'com.android.support:appcompat-v7:23.1.1'
   compile 'com.android.support:design:23.1.1'
+  compile 'com.android.support:gridlayout-v7:23.1.1'
   androidTestCompile 'com.android.support.test:runner:0.4'
   androidTestCompile 'com.android.support.test:rules:0.4'
   androidTestCompile 'com.android.support.test.espresso:espresso-core:2.2.1'
