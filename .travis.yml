@@ -4,13 +4,10 @@ android:
   components:
     - tools
     - platform-tools
-    - build-tools-23.0.3
+    - build-tools-25.0.3
     - android-25
     - extra-android-support
     - extra-android-m2repository
-  licenses:
-    - android-sdk-license-5be876d5
-    - android-sdk-license-c81a61d9
 
 jdk: oraclejdk8
 
