@@ -1,5 +1,5 @@
 ext.minSdkVersion = 15
-ext.compileSdkVersion = 23
+ext.compileSdkVersion = 25
 ext.buildToolsVersion = '23.0.3'
 
 buildscript {
