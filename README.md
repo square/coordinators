@@ -34,7 +34,7 @@ Download
 
 ```groovy
 dependencies {
-  compile 'com.squareup.coordinators:coordinators:0.2'
+  compile 'com.squareup.coordinators:coordinators:0.3'
 }
 ```
 
