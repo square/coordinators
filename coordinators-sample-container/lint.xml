@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<lint>
+    <issue id="ButtonStyle" severity="ignore" />
+    <issue id="GoogleAppIndexingWarning" severity="ignore" />
+
+    <!-- There's an SDK_INT check in the library, but lint warns about it here.
+         Lint bug. -->
+    <issue id="ObsoleteSdkInt" severity="ignore" />
+</lint>

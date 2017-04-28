@@ -24,6 +24,7 @@
     app:columnCount="3"
     tools:context=".BasicSampleActivity"
     android:id="@+id/board_view"
+    tools:ignore="UnusedAttribute"
 >
 
   <TextView
