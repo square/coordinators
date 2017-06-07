@@ -21,7 +21,7 @@ class ObjectGraph {
   }
 
   @SuppressWarnings("unchecked") //
-  <T> T get(String className) {
+  <T> T create(String className) {
     if (TicTacToeCoordinator.class.getName().equals(className)) {
       return (T) ticTacToeCoordinator();
     }
