@@ -29,11 +29,13 @@ public final class Coordinators {
    *
    * Immediately calls provider to obtain a Coordinator for the view. If a non-null Coordinator is
    * returned, that Coordinator is permanently bound to the View.
+   *
+   * @return The value returned from the provider.
    */
-  public static void bind(View view, CoordinatorProvider provider) {
+  @Nullable public static Coordinator bind(View view, CoordinatorProvider provider) {
     final Coordinator coordinator = provider.provideCoordinator(view);
     if (coordinator == null) {
-      return;
+      return null;
     }
 
     View.OnAttachStateChangeListener binding = new Binding(coordinator, view);
@@ -44,6 +46,8 @@ public final class Coordinators {
     if (isAttachedToWindow(view)) {
       binding.onViewAttachedToWindow(view);
     }
+
+    return coordinator;
   }
 
   /**
