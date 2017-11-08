@@ -22,7 +22,7 @@ final class Binding implements View.OnAttachStateChangeListener {
   private final Coordinator coordinator;
   private final View view;
 
-  Binding(Coordinator coordinator, View view) {
+  Binding(@NonNull Coordinator coordinator, @NonNull View view) {
     this.coordinator = coordinator;
     this.view = view;
   }

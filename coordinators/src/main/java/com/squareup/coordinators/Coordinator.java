@@ -15,6 +15,7 @@
  */
 package com.squareup.coordinators;
 
+import android.support.annotation.NonNull;
 import android.view.View;
 
 /**
@@ -39,7 +40,7 @@ public class Coordinator {
    *
    * @see View#onAttachedToWindow()
    */
-  public void attach(View view) {
+  public void attach(@NonNull View view) {
   }
 
   /**
@@ -49,7 +50,7 @@ public class Coordinator {
    *
    * @see View#onDetachedFromWindow()
    */
-  public void detach(View view) {
+  public void detach(@NonNull View view) {
   }
 
   /**
