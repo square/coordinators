@@ -16,6 +16,7 @@
 package com.squareup.coordinators;
 
 import android.os.Build;
+import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.view.View;
 import android.view.ViewGroup;
@@ -30,7 +31,7 @@ public final class Coordinators {
    * Immediately calls provider to obtain a Coordinator for the view. If a non-null Coordinator is
    * returned, that Coordinator is permanently bound to the View.
    */
-  public static void bind(View view, CoordinatorProvider provider) {
+  public static void bind(@NonNull View view, @NonNull CoordinatorProvider provider) {
     final Coordinator coordinator = provider.provideCoordinator(view);
     if (coordinator == null) {
       return;
@@ -50,7 +51,8 @@ public final class Coordinators {
    * Installs a binder that calls {@link #bind(View, CoordinatorProvider)} for any child view added
    * to the group.
    */
-  public static void installBinder(ViewGroup viewGroup, final CoordinatorProvider provider) {
+  public static void installBinder(@NonNull ViewGroup viewGroup,
+      @NonNull final CoordinatorProvider provider) {
     int childCount = viewGroup.getChildCount();
     for (int i = 0; i < childCount; i++) {
       bind(viewGroup.getChildAt(i), provider);
@@ -58,7 +60,7 @@ public final class Coordinators {
     viewGroup.setOnHierarchyChangeListener(new Binder(provider));
   }
 
-  @Nullable public static Coordinator getCoordinator(View view) {
+  @Nullable public static Coordinator getCoordinator(@NonNull View view) {
     return (Coordinator) view.getTag(R.id.coordinator);
   }
 

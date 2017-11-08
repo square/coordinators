@@ -15,13 +15,14 @@
  */
 package com.squareup.coordinators;
 
+import android.support.annotation.NonNull;
 import android.view.View;
 import android.view.ViewGroup;
 
 final class Binder implements ViewGroup.OnHierarchyChangeListener {
   private final CoordinatorProvider provider;
 
-  Binder(CoordinatorProvider provider) {
+  Binder(@NonNull CoordinatorProvider provider) {
     this.provider = provider;
   }
 
