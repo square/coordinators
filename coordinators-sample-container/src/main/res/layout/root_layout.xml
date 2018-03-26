@@ -44,6 +44,20 @@
           />
     </Button>
 
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Double Detach"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:textSize="24sp"
+        tools:ignore="HardcodedText"
+        >
+      <tag
+          android:id="@id/layout_to_show_tag"
+          android:value="@layout/double_detach_view"
+          />
+    </Button>
+
   </LinearLayout>
 
   <FrameLayout
