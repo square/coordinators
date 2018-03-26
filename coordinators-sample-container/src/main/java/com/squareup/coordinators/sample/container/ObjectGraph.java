@@ -2,6 +2,7 @@ package com.squareup.coordinators.sample.container;
 
 import com.squareup.coordinators.sample.container.counter.Counter;
 import com.squareup.coordinators.sample.container.counter.CounterCoordinator;
+import com.squareup.coordinators.sample.container.doubledetach.DoubleDetachCoordinator;
 import com.squareup.coordinators.sample.container.tictactoe.TicTacToeBoard;
 import com.squareup.coordinators.sample.container.tictactoe.TicTacToeCoordinator;
 
@@ -16,6 +17,10 @@ class ObjectGraph {
     return new CounterCoordinator(counter);
   }
 
+  private DoubleDetachCoordinator doubleDetachCoordinator() {
+    return new DoubleDetachCoordinator();
+  }
+
   private TicTacToeCoordinator ticTacToeCoordinator() {
     return new TicTacToeCoordinator(ticTacToe);
   }
@@ -24,6 +29,10 @@ class ObjectGraph {
   <T> T get(String className) {
     if (TicTacToeCoordinator.class.getName().equals(className)) {
       return (T) ticTacToeCoordinator();
+    }
+
+    if (DoubleDetachCoordinator.class.getName().equals(className)) {
+      return (T) doubleDetachCoordinator();
     }
 
     if (CounterCoordinator.class.getName().equals(className)) {

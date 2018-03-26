@@ -19,6 +19,7 @@ package com.squareup.coordinators.sample.container;
 import android.app.Activity;
 import android.os.Bundle;
 import android.support.annotation.LayoutRes;
+import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -38,11 +39,11 @@ public class ContainerSampleActivity extends Activity {
     super.onCreate(savedInstanceState);
 
     setContentView(R.layout.root_layout);
-    container = (ViewGroup) findViewById(R.id.container);
+    container = findViewById(R.id.container);
 
     // Make each button show the layout identified in its tag. See root_layout.xml
 
-    ViewGroup buttons = (ViewGroup) findViewById(R.id.buttons);
+    ViewGroup buttons = findViewById(R.id.buttons);
     for (int i = 0; i < buttons.getChildCount(); i++) {
       View button = buttons.getChildAt(i);
 
@@ -65,7 +66,7 @@ public class ContainerSampleActivity extends Activity {
     // BECAUSE WE CAN!
 
     Coordinators.installBinder(container, new CoordinatorProvider() {
-      @Nullable @Override public Coordinator provideCoordinator(View view) {
+      @Nullable @Override public Coordinator provideCoordinator(@NonNull View view) {
         String coordinatorName = (String) view.getTag(R.id.coordinator_class_tag);
         return OBJECT_GRAPH.get(coordinatorName);
       }

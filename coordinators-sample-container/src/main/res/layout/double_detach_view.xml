@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+  <tag
+      android:id="@id/coordinator_class_tag"
+      android:value="com.squareup.coordinators.sample.container.doubledetach.DoubleDetachCoordinator"
+      />
+
+  <android.support.v4.widget.Space
+      android:layout_width="match_parent"
+      android:layout_height="0dp"
+      android:layout_weight="1"
+      />
+
+  <Button
+      android:id="@+id/double_detach_button"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_gravity="center"
+      android:text="Finish It"
+      android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+      android:textSize="24sp"
+      tools:ignore="HardcodedText"
+      android:layout_marginBottom="16sp"
+      />
+
+  <TextView
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:gravity="center"
+      android:text="Finishes the activity, \nleading Android to call \nonViewDetachedFromWindow \nnot once, but twice."
+      android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+      android:textSize="24sp"
+      tools:ignore="HardcodedText"
+      />
+
+  <android.support.v4.widget.Space
+      android:layout_width="match_parent"
+      android:layout_height="0dp"
+      android:layout_weight="1"
+      />
+
+</LinearLayout>

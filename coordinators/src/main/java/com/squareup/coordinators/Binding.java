@@ -46,8 +46,13 @@ final class Binding implements View.OnAttachStateChangeListener {
       throw new AssertionError("Binding for view " + view
           + " notified of detachment of different view " + v);
     }
-    coordinator.detach(view);
+    if (!coordinator.isAttached()) {
+      // Android tries not to make reentrant calls, but doesn't always succeed.
+      // See https://github.com/square/coordinators/issues/28
+      return;
+    }
     coordinator.setAttached(false);
+    coordinator.detach(view);
     view.setTag(R.id.coordinator, null);
   }
 }
