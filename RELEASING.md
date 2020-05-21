@@ -1,6 +1,14 @@
 Releasing
 ========
 
+In order to deploy artifacts to a Maven repository, you'll need to set two properties in your private
+Gradle properties file (`~/.gradle/gradle.properties`):
+
+```
+SONATYPE_NEXUS_USERNAME=<username>
+SONATYPE_NEXUS_PASSWORD=<password>
+```
+
  1. Change the version in `gradle.properties` to a non-SNAPSHOT version.
  2. Update the `CHANGELOG.md` for the impending release.
  3. Update the gradle coordinates in the README.
