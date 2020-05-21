@@ -9,7 +9,7 @@ android {
 
     minSdkVersion 21 // needed for <tag> in the layout files in this sample.
     versionName VERSION_NAME
-    testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
   }
 
   buildTypes {
@@ -24,19 +24,12 @@ android {
 }
 
 dependencies {
-  compile project(':coordinators')
-  compile 'com.android.support:appcompat-v7:25.3.1'
-  compile 'com.android.support:design:25.3.1'
-  androidTestCompile 'com.android.support.test:runner:0.5'
-  androidTestCompile 'com.android.support.test:rules:0.5'
-  androidTestCompile 'com.android.support.test.espresso:espresso-core:2.2.2'
-  compile 'com.jakewharton.rxrelay2:rxrelay:2.0.0'
-  compile 'io.reactivex.rxjava2:rxjava:2.0.1'
-}
-
-//noinspection GroovyAssignabilityCheck
-configurations.all {
-  resolutionStrategy {
-    force 'com.android.support:support-annotations:23.1.1'
-  }
+  implementation project(':coordinators')
+  implementation 'androidx.appcompat:appcompat:1.1.0'
+  implementation 'com.google.android.material:material:1.1.0'
+  androidTestImplementation 'androidx.test:runner:1.2.0'
+  androidTestImplementation 'androidx.test:rules:1.2.0'
+  androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+  implementation 'com.jakewharton.rxrelay2:rxrelay:2.1.1'
+  implementation 'io.reactivex.rxjava2:rxjava:2.2.19'
 }

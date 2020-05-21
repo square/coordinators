@@ -15,9 +15,9 @@
  */
 package com.squareup.coordinators;
 
-import android.support.annotation.NonNull;
 import android.view.View;
 import android.view.ViewGroup;
+import androidx.annotation.NonNull;
 
 final class Binder implements ViewGroup.OnHierarchyChangeListener {
   private final CoordinatorProvider provider;

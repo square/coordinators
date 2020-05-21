@@ -1,9 +1,9 @@
 package com.squareup.coordinators.sample.container.doubledetach;
 
 import android.app.Activity;
-import android.support.annotation.NonNull;
 import android.view.View;
 import android.view.ViewGroup;
+import androidx.annotation.NonNull;
 import com.squareup.coordinators.Coordinator;
 import com.squareup.coordinators.sample.container.R;
 

@@ -1,14 +1,14 @@
 ext.minSdkVersion = 15
-ext.compileSdkVersion = 26
-ext.buildToolsVersion = '26.0.2'
+ext.compileSdkVersion = 29
+ext.buildToolsVersion = '29.0.3'
 
 buildscript {
   repositories {
-    mavenCentral()
+    google()
     jcenter()
   }
   dependencies {
-    classpath 'com.android.tools.build:gradle:2.3.1'
+    classpath 'com.android.tools.build:gradle:3.6.3'
   }
 }
 
@@ -17,7 +17,8 @@ subprojects {
   version = VERSION_NAME
 
   repositories {
-    mavenCentral()
+    google()
+    jcenter()
   }
 
   apply plugin: 'checkstyle'

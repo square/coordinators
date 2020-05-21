@@ -18,12 +18,12 @@ package com.squareup.coordinators.sample.container;
 
 import android.app.Activity;
 import android.os.Bundle;
-import android.support.annotation.LayoutRes;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import androidx.annotation.LayoutRes;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import com.squareup.coordinators.Coordinator;
 import com.squareup.coordinators.CoordinatorProvider;
 import com.squareup.coordinators.Coordinators;
@@ -82,7 +82,7 @@ public class ContainerSampleActivity extends Activity {
 
   private void refresh() {
     container.removeAllViews();
-    if (currentScreen > 0) {
+    if (currentScreen != 0) {
       LayoutInflater.from(container.getContext()).inflate(currentScreen, container);
     }
   }

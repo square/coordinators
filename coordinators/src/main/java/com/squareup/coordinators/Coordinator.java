@@ -15,8 +15,8 @@
  */
 package com.squareup.coordinators;
 
-import android.support.annotation.NonNull;
 import android.view.View;
+import androidx.annotation.NonNull;
 
 /**
  * A Coordinator is attached to one view at a time.

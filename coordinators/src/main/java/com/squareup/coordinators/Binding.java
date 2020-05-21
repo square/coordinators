@@ -15,8 +15,8 @@
  */
 package com.squareup.coordinators;
 
-import android.support.annotation.NonNull;
 import android.view.View;
+import androidx.annotation.NonNull;
 
 final class Binding implements View.OnAttachStateChangeListener {
   private final Coordinator coordinator;
